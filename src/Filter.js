@@ -39,17 +39,18 @@ export function DefaultFilterForColumn({
     setFilter,
   },
 }) {
-  return (
-    <Input
-      value={filterValue || ""}
-      onChange={(e) => {
-        // Set undefined to remove the filter entirely
-        setFilter(e.target.value || undefined);
-      }}
-      placeholder={`Search ...`}
-      style={{ marginTop: "10px" }}
-    />
-  );
+  // Remove Individual sarch 
+  // return (
+  //   <Input
+  //     value={filterValue || ""}
+  //     onChange={(e) => {
+  //       // Set undefined to remove the filter entirely
+  //       setFilter(e.target.value || undefined);
+  //     }}
+  //     placeholder={`Search ...`}
+  //     style={{ marginTop: "10px" }}
+  //   />
+  // );
 }
 
 // Component for Custom Select Filter
@@ -65,20 +66,21 @@ export function SelectColumnFilter({
     return [...options.values()];
   }, [id, preFilteredRows]);
 
-  // UI for Multi-Select box
-  return (
-    <select
-      value={filterValue}
-      onChange={(e) => {
-        setFilter(e.target.value || undefined);
-      }}
-    >
-      <option value="">All</option>
-      {options.map((option, i) => (
-        <option key={i} value={option}>
-          {option}
-        </option>
-      ))}
-    </select>
-  );
+  // UI for Multi-Select box filer
+   // Remove Individual Filter 
+  // return (
+  //   <select
+  //     value={filterValue}
+  //     onChange={(e) => {
+  //       setFilter(e.target.value || undefined);
+  //     }}
+  //   >
+  //     <option value="">All</option>
+  //     {options.map((option, i) => (
+  //       <option key={i} value={option}>
+  //         {option}
+  //       </option>
+  //     ))}
+  //   </select>
+  // );
 }
